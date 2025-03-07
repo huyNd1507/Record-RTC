@@ -1,6 +1,5 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import RecordFive from "./components/share/RecordFive";
-import ScreenRecorder from "./components/share/Recordone";
 import RecordOne from "./components/share/Recordone";
 import RecordThree from "./components/share/RecordThree";
 
