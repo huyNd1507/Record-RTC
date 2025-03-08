@@ -27,7 +27,7 @@ export default function Home() {
             Page 2
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/page-3"
             className={({ isActive }) =>
@@ -36,7 +36,7 @@ export default function Home() {
           >
             Page 3
           </NavLink>
-        </li>
+        </li> */}
       </ul>
       <Routes>
         <Route path="/" element={<RecordThree />} />
