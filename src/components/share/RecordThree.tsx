@@ -42,14 +42,14 @@ const RecordThree = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const scale = 4; // Tăng scale để có chất lượng cao hơn
+    const scale = 3; // Tăng scale để có chất lượng cao hơn
     canvas.width = canvas.clientWidth * scale;
     canvas.height = canvas.clientHeight * scale;
 
-    const stream = canvas.captureStream(120); // FPS
+    const stream = canvas.captureStream(60); // FPS
     const options = {
       mimeType: `video/${outputFormat}; codecs=vp9`,
-      videoBitsPerSecond: 5000000,
+      // videoBitsPerSecond: 5000000,
     };
 
     mediaRecorderRef.current = new MediaRecorder(stream, options);
@@ -112,7 +112,7 @@ const RecordThree = () => {
       if (div && ctx) {
         const capture = await html2canvas(div, {
           useCORS: true,
-          scale: 4,
+          scale: 3,
           logging: false,
         });
         canvas.width = capture.width;
